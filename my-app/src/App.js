@@ -9,7 +9,6 @@ function App() {
     <div className="container">
     <Textform heading="Enter your text below..!" />
     </div>
-
     </>
   );
 }
