@@ -15,6 +15,12 @@ export default function Textform(props) {
         console.log("OnChangeHandler");
         setText(event.target.value);
     }
+    const clearText = () => {
+        console.log("clearText");
+        let new_text = "";
+
+        setText(new_text);
+    }   
     return (
         <>
             <div className="container">
@@ -24,7 +30,8 @@ export default function Textform(props) {
                         <label className="form-label">Example textarea</label>
                         <textarea className="form-control" value={text} onChange={OnChangeHandler} id="mybox" rows="8"></textarea>
                     </div>
-                    <button className="btn btn-primary" onClick={UppcaseHandler} >UpperCase</button>
+                    <button className="btn btn-primary mx-2" onClick={UppcaseHandler} >UpperCase</button>
+                    <button className="btn btn-dark mx-2" onClick={clearText} >Clear</button>
                 </div>
             </div>
             <div className="container my-3">
