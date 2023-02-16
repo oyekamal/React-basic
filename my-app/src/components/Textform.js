@@ -20,10 +20,10 @@ export default function Textform(props) {
         let new_text = "";
 
         setText(new_text);
-    }   
+    }
     return (
         <>
-            <div className="container">
+            <div className="container my-3">
                 <div>
                     <h1>{props.heading}</h1>
                     <div className="mb-3">
