@@ -7,7 +7,7 @@ export default function Textform(props) {
     const UppcaseHandler = () => {
         console.log("uppercase");
         let new_text = text.toUpperCase();
-
+        props.showAlert('Uppercase', "success");
         setText(new_text);
     }
 
@@ -20,6 +20,7 @@ export default function Textform(props) {
         let new_text = "";
 
         setText(new_text);
+        props.showAlert('Clean', "success");
     }
     return (
         <>
