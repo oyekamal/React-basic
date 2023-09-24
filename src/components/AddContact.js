@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 
 
 class AddContact extends React.Component {
@@ -23,6 +23,7 @@ class AddContact extends React.Component {
         return (
             <div className="ui main">
                 <h1>Add Contact</h1>
+                <Link to="/list" className="ui button right">List Contact</Link>
                 <form className="ui form" onSubmit={this.add}>
                     <div className="field">
                         <label>Name</label>
