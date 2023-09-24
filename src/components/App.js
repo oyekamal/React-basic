@@ -13,7 +13,9 @@ function App() {
     setContacts([...contacts, { id: contacts.length + 1, ...contact }]);
 }
 
-
+  const removeContactHandler = (id) => {
+    setContacts(contacts.filter(contact => contact.id!== id));
+  };
   //   {
   //     id: 1,
   //     name: 'kamal',
@@ -45,7 +47,7 @@ function App() {
     <div className='ui container' >
       <Header />
       <AddContact addContactHandler={addContactHandler} />
-      <ContactList contacts={contacts}  />
+      <ContactList contacts={contacts} getContactId={removeContactHandler} />
     </div>
     
   );
